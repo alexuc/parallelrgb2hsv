@@ -160,8 +160,8 @@ int main(int argc, char** argv )
 {
     double elapsedTime;
 	// declare input and output file names, according to user input
-    const char* inputFileName = argv[0];
-    const char* outputFileName = argv[1];
+    const char* inputFileName = argv[1];
+    const char* outputFileName = argv[2];
 
     // starting timer
     timerStart();
@@ -235,7 +235,7 @@ int main(int argc, char** argv )
                 int index = channels * (cols * j + i);
 				
 				// obtain RGB values from video
-                unsigned char b = targetFrame.data[index], g = targetFrame.data[index + 1], r = targetFrame.data[index + 2]
+                unsigned char b = targetFrame.data[index], g = targetFrame.data[index + 1], r = targetFrame.data[index + 2];
 				// declare target HSV variables
 				unsigned char h,s,v;
 				
